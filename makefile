@@ -14,7 +14,7 @@ EXE_EXT=
 LIBPREFIX=lib
 OUT = -o $@
 RM= -rm -f
-AR= ar crs
+#AR= ar crs
 
 # Linux
 LD = $(CC)
