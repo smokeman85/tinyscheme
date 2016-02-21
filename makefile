@@ -20,10 +20,10 @@ AR= ar crs
 LD = $(CC)
 LDFLAGS = -shared
 DEBUG=-g -Wno-char-subscripts -O
-SYS_LIBS= -ldl -lm
+#SYS_LIBS= -ldl -lm
 PLATFORM_FEATURES= -DSUN_DL=1
 
-FEATURES = $(PLATFORM_FEATURES) -DUSE_DL=1 -DUSE_MATH=1 -DUSE_ASCII_NAMES=0
+FEATURES = $(PLATFORM_FEATURES) -DUSE_DL=1  -DUSE_ASCII_NAMES=0
 
 OBJS = scheme.$(Osuf) dynload.$(Osuf)
 
