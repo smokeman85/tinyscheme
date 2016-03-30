@@ -23,14 +23,14 @@ DEBUG=-g -Wno-char-subscripts -O
 #SYS_LIBS= -ldl -lm
 PLATFORM_FEATURES= -DSUN_DL=1
 
-FEATURES = $(PLATFORM_FEATURES) -DUSE_DL=1  -DUSE_ASCII_NAMES=0
+FEATURES = $(PLATFORM_FEATURES) -DUSE_DL=1  -DUSE_ASCII_NAMES=0 -DUSE_MATH=1
 
 OBJS = scheme.$(Osuf) dynload.$(Osuf)
 
 LIBTARGET = $(LIBPREFIX)tinyscheme.$(SOsuf)
 STATICLIBTARGET = $(LIBPREFIX)tinyscheme.$(LIBsuf)
 
-all: $(LIBTARGET) scheme$(EXE_EXT)
+all: $(LIBTARGET)
 
 %.$(Osuf): %.c
 	$(CC) -I. -c $(DEBUG) $(FEATURES) $(DL_FLAGS) $(CFLAGS) $<
