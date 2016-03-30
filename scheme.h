@@ -12,9 +12,9 @@ extern "C" {
 /*
  * Default values for #define'd symbols
  */
-#ifndef STANDALONE       /* If used as standalone interpreter */
-# define STANDALONE 1
-#endif
+/* #ifndef STANDALONE       /\* If used as standalone interpreter *\/ */
+/* # define STANDALONE 1 */
+/* #endif */
 
 #ifndef _MSC_VER
 # define USE_STRCASECMP 1
